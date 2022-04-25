@@ -1,8 +1,8 @@
 # Flatiron - Capstone Project by Vi Bui
 # DISCO DUO 
-# Building Deep Nueral Networks using music data and TensorFlow 
+# Build Deep Nueral Networks Using Music Data and TensorFlow 
 
-<img src='Images/Popular_Movies.png'>
+<img src='Images/Disco Duo Logo Prototype.jpg'>
 
 # Overview
 
@@ -46,7 +46,7 @@ There are 9724 unique entries and 610 unique users in the data.
 
 **The most popular genres: Drama, Comedy, and Action**
 
-<img src='Images/Genre_Distribution.png'>
+<img src='Images/Song Metrics - Correlation Matrix.png'>
 
 <br>
 
