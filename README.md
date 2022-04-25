@@ -1,6 +1,6 @@
 # Flatiron - Capstone Project by Vi Bui
 # DISCO DUO 
-# Build Deep Nueral Networks Using Music Data and TensorFlow 
+## Building Deep Nueral Networks using music data and Tensorflow to predict metrics such as danceability, valence, acousticness, 
 
 <img src='Images/Disco Duo Logo Prototype.jpg'>
 
