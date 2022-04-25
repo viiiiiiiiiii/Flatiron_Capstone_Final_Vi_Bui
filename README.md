@@ -80,13 +80,13 @@ While all models showed strong results and predictions, we chose Model 3, which 
 3. Acousticness
 4. Instrumentalness
 5. Liveness
-6. Valence 
-<br>
-* Build platform to connect users listening to the same song and apply Disco Duo
-<br>
+6. Valence <br>
+* Build platform to connect users listening to the same song and apply Disco Duo <br>
 * Expand ways to use Disco Duo (game night, silent discos, etc.)
+
 <br>
-**THANK YOU!!**
+
+*THANK YOU!!*
 
 # Repository Structure
 
