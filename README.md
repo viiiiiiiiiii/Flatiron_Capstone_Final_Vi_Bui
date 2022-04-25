@@ -1,70 +1,65 @@
 # Flatiron - Capstone Project by Vi Bui
 # DISCO DUO 
-## Building Deep Nueral Networks using music data and Tensorflow to predict metrics such as danceability, valence, acousticness, 
+## Building Deep Nueral Networks using music data and Tensorflow to predict metrics such as danceability
 
 <img src='Images/Disco Duo Logo Prototype.jpg'>
 
 # Overview
 
-Vi(sion) Studios, a new streaming service, is looking to launch a concept called "Digital Cinema Night" where customers can build a "Cinema Night" around specific movies. They've hired us to build a Recommendation System in order to launch this concept.  
+**Client:** Existing or new music streaming services. Existing: Spotify, Pandora, Amazon Music, etc. New: companies interested in building new platforms to connect people through music. 
 
-## Data, Methodology, and Analysis <br/> 
+**Objective:** Create a platform where listeners of the same song are connected and able to discover new songs through their “connector song” by requesting another song based on a musical metric such as: danceability, loudness, acousticness, valence, etc.
+ 
+**Data, Methodology, and Models** <br/> 
 
-Data source: Spotify dataset 
+**Data source**: Spotify 
+1. Spotify Song Data - https://www.kaggle.com/akiboy96/spotify-dataset
+2. Spotify Genre Data - https://www.kaggle.com/code/akiboy96/spotify-song-popularity-genre-exploration/data?select=genre_music.csv
 
-More about the data from MovieLens: “Users were selected at random for inclusion. All selected users had rated at least 20 movies. No demographic information is included. Each user is represented by an id, and no other information is provided.”
+**Methodology:** Pull sample from data; create spectrogram images for songs; train model to predict danceability 
 
-There are 9724 unique entries and 610 unique users in the data. 
+**Models:** Sequential Models 
+1. Layers
+2. Stochastic 
+3. Add layers
 
-**Models Built:** 
-
-1. Singular Vector Decomposition Model (SVD)
-2. k-Nearest Neighbor Baseline Model (KNNB)
-3. Non-Negative Matrix Factorization Model (NMF)
-
-**Features included and created:**
-1. Movie ID (included)
-2. User ID (included) 
-3. Ratings (included)
-4. Year (cleaned & created)
-5. Genre (cleaned & created) 
-6. Ratings Count (created) 
+**Target for first model: danceability** <br>
+danceability: A value of 0.0 is least danceable and 1.0 is most danceable. Danceability describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity.
 
 <br>
 
 ## BUSINESS VALUE
-<img src='Images/Business_Value.png'>
+Connect people through music in a new way // connect people in a new way through music
 
 <br> 
 
 ## OBSERVATIONS ABOUT THE DATA
-**Most movies are from the 1990s to the early 2000s (key Millennial time period)**
-
-<img src='Images/Movie_Years.png'>
-
-<br>
-
-**The most popular genres: Drama, Comedy, and Action**
+Danceability is most strongly correlated with valence (happiness), popularity, loudness, and energy
 
 <img src='Images/Song Metrics - Correlation Matrix.png'>
 
 <br>
 
-**Users tend to rate in whole numbers and 4 (out of 5) is the most popular rating**
+**Sample dataset had proportionately more Rock songs than the full dataset**
 
-<img src='Images/Ratings_Distribution.png'>
+<img src='Images/Genre_Data.png'>
 
 <br>
+
+# Methodology 
+## Spectrograms were used as images to model the data
+
+<img src='Images/Spectrograms.png'>
 
 # Models & Metrics 
-## We ran three models and used RMSE (root mean square error), which tells us how close our model's predicted ratings are to actual ratings. 
+## We ran three models and used RMSE (root mean square error), which tells us how close our models' predicted ratings are to actual danceability. 
 
 <br>
-While all models showed strong results and predictions, we chose the Singular Value Decomposition (SVD) model, which had an RMSE of 0.86, meaning our predictions, on average, were 0.86 points away from actual ratings. 
+While all models showed strong results and predictions, we chose Model 3, which had the best RMSE of of 0.0214, meaning our predictions, on average, were 0.0214 points away from actual danceability measure (range: 1-10). 
 
 <br>
 
-<img src='Images/Models_Clean.png'>
+<img src='Images/Model3.png'>
 
 <br>
 
@@ -72,39 +67,34 @@ While all models showed strong results and predictions, we chose the Singular Va
 
 ## Summary of recommendations
 
-**Use SVD Model to launch**
-- While all models showed improvement after tuning and KNN Baseline and NMF Models have low RMSEs (predictions are close to actual ratings), in order to reduce the risk of over-fitting, the SVD Model - with a strong RMSE of 0.86 - is recommended 
-
-**Test for 6 months and re-evaluate**
-- Revisit KNN Baseline and/or NMF Models if necessary 
-
-**Launch concept with Millennial (or Millennial-enthusiast) audience**
-- Movies leaned toward 1990s to early 2000s 
-- Opportunity to build early loyalty with an influential demographic
+* All three Sequential Models performed well, and we feel most confident with Model 3
+* With Model 3's RMSE (root mean squared error) = loss: 0.0214 - val_loss: 0.0183, our model shows it will be a strong predictor of "danceability" of songs 
+* We will use the same approach in our Future Work with other metrics in the dataset 
 
 <br>
 
 ## **FUTURE WORK**
-- Build functionality around genre and year choices 
-- Extend audience beyond initial millennial focus 
-- Expand dataset with more movie choices & continually refine “Digital Cinema Night” system to make stronger recommendations to users
-- Build exquisite user interface 
-
-<br> 
-
-## BRINGING THE VI(SION) TO LIFE
-## DIGITAL CINEMA NIGHT!!
+* Run models for all remaining metrics: 
+1. Energy
+2. Speechiness
+3. Acousticness
+4. Instrumentalness
+5. Liveness
+6. Valence 
 <br>
-
-<img src='Images/Digital_Cinema_Night.png'>
-
+* Build platform to connect users listening to the same song and apply Disco Duo
 <br>
+* Expand ways to use Disco Duo (game night, silent discos, etc.)
+<br>
+**THANK YOU!!**
 
 # Repository Structure
 
 - Images 
+- gitignore
 - README.me
-- Vi_Bui_Capstone_Project_FINAL_Surprise.ipynb
-- Vi_Bui_Capstone_FINAL_Jupyter Notebook.pdf
-- Vi_Bui_Capstone_Project_FINAL_Presentation.pdf
-- viiiiiiiiiii_Flatiron_Capstone_Final_Vi_Bui_ Phase 4 Project - Recommendation System.pdf
+- Vi_Bui_Capstone_Presentation.key
+- Vi_Bui_Capstone_Presentation.pdf
+- Vi_Bui_Capstone_Submission_Jupyter Notebook.pdf
+- Vi_Bui_Capstone_Submission.ipynb
+- viiiiiiiiiii_Flatiron_Capstone_Final_Vi_Bui.pdf
