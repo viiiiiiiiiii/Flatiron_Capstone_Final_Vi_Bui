@@ -2,7 +2,7 @@
 # DISCO DUO 
 ## Building Deep Nueral Networks using music data and Tensorflow to predict metrics such as danceability
 
-<img src='Images/Disco Duo Logo Prototype.jpg'>
+<img src='Images/Disco Duo Logo Prototype.jpg' width=77%>
 
 # Overview
 
@@ -18,7 +18,7 @@
 
 **Methodology:** Pull sample from data; create spectrogram images for songs; train model to predict danceability 
 
-**Models:** Sequential Models 
+**Models:** Sequential Models (Keras)
 1. Layers
 2. Stochastic 
 3. Add layers
@@ -36,7 +36,7 @@ Connect people through music in a new way // connect people in a new way through
 ## OBSERVATIONS ABOUT THE DATA
 Danceability is most strongly correlated with valence (happiness), popularity, loudness, and energy
 
-<img src='Images/Song Metrics - Correlation Matrix.png'>
+<img src='Images/Song Metrics - Correlation Matrix.png' width=70%>
 
 <br>
 
@@ -59,7 +59,7 @@ While all models showed strong results and predictions, we chose Model 3, which 
 
 <br>
 
-<img src='Images/Model3.png'>
+<img src='Images/Final Model.png'>
 
 <br>
 
