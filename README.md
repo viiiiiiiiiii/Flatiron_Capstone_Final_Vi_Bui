@@ -2,7 +2,7 @@
 # DISCO DUO 
 ## Building Deep Nueral Networks using music data and Tensorflow to predict metrics such as danceability
 
-<img src='Images/Disco Duo Logo Prototype.jpg' width=77%>
+<img src='Images/Disco Duo Logo Prototype.jpg' width=70%>
 
 # Overview
 
@@ -24,7 +24,7 @@
 3. Add layers
 
 **Target for first model: danceability** <br>
-danceability: A value of 0.0 is least danceable and 1.0 is most danceable. Danceability describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity.
+Danceability: A value of 0.0 is least danceable and 1.0 is most danceable. Danceability describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity.
 
 <br>
 
@@ -40,9 +40,9 @@ Danceability is most strongly correlated with valence (happiness), popularity, l
 
 <br>
 
-**Sample dataset had proportionately more Rock songs than the full dataset**
+**Sample dataset has similar genre distribution as full dataset**
 
-<img src='Images/Genre_Data.png'>
+<img src='Images/Genre_Data.png' width=70%>
 
 <br>
 
@@ -52,14 +52,20 @@ Danceability is most strongly correlated with valence (happiness), popularity, l
 <img src='Images/Spectrograms.png'>
 
 # Models & Metrics 
-## We ran three models and used RMSE (root mean square error), which tells us how close our models' predicted ratings are to actual danceability. 
+## We ran three models and used MSE (mean squared error) as our performance metric. The loss function (Mean Squared Error) is used to indicate how far our predictions deviate from the target values. 
 
 <br>
-While all models showed strong results and predictions, we chose Model 3, which had the best RMSE of of 0.0214, meaning our predictions, on average, were 0.0214 points away from actual danceability measure (range: 1-10). 
+While all models showed strong results and predictions, we chose Model 3 as our Final Model. Our final model's MSE (Mean Squared Error) shows it will be a strong predictor of "danceability" of songs 
 
 <br>
 
-<img src='Images/Final Model.png'>
+Final Model MSE:
+* loss (MSE): 0.0191
+* val_loss: 0.0183 (validation MSE)
+
+<br>
+
+<img src='Images/Final Model.png' width=70%>
 
 <br>
 
@@ -68,7 +74,7 @@ While all models showed strong results and predictions, we chose Model 3, which 
 ## Summary of recommendations
 
 * All three Sequential Models performed well, and we feel most confident with Model 3
-* With Model 3's RMSE (root mean squared error) = loss: 0.0214 - val_loss: 0.0183, our model shows it will be a strong predictor of "danceability" of songs 
+* With Model 3's MSE (mean squared error) = loss: 0.0191 & val_loss: 0.0183, our model shows it will be a strong predictor of "danceability" of songs 
 * We will use the same approach in our Future Work with other metrics in the dataset 
 
 <br>
@@ -82,16 +88,20 @@ While all models showed strong results and predictions, we chose Model 3, which 
 5. Liveness
 6. Valence <br>
 * Build platform to connect users listening to the same song and apply Disco Duo <br>
-* Expand ways to use Disco Duo (game night, silent discos, etc.)
+* Expand ways to use Disco Duo (disco dates, silent disco games, etc.)
 
 <br>
 
 *THANK YOU!!*
 
+<img src='Images/Thank You.png' width=70%>
+
+<br>
+
 # Repository Structure
 
 - Images 
-- gitignore
+- .gitignore
 - README.me
 - Vi_Bui_Capstone_Presentation.key
 - Vi_Bui_Capstone_Presentation.pdf
